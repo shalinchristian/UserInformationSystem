@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="UserInformationSystem.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>User Information System</title>
+    <link rel="stylesheet" href="~/Styles/site.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        header {
+            background-color: #0078D7;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        nav {
+            background-color: #005a9e;
+            display: flex;
+            gap: 20px;
+            padding: 10px 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #0078D7;
+        }
+
+        .content {
+            padding: 25px 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>User Information System</h1>
+            <asp:Label ID="lblUser" runat="server" ForeColor="White" Font-Size="Small" />
+        </header>
+
+        <nav>
+            <asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Home.aspx" Text="Home"></asp:HyperLink>
+            <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Register.aspx" Text="Register"></asp:HyperLink>
+            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx" Text="Login"></asp:HyperLink>
+            <asp:HyperLink ID="lnkProfile" runat="server" NavigateUrl="~/Profile.aspx" Text="Profile"></asp:HyperLink>
+            <asp:HyperLink ID="lnkUpdateDetails" runat="server" NavigateUrl="~/UpdateDetails.aspx" Text="Update Details"></asp:HyperLink>
+            <asp:HyperLink ID="lnkAddAchievements" runat="server" NavigateUrl="~/AddAchievements.aspx" Text="Add Achievements"></asp:HyperLink>
+            <asp:HyperLink ID="lnkAchievementsList" runat="server" NavigateUrl="~/AchievementsList.aspx" Text="Achievements List"></asp:HyperLink>
+            <asp:HyperLink ID="lnkLogout" runat="server" NavigateUrl="~/Logout.aspx" Text="Logout"></asp:HyperLink>
+        </nav>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            &copy; <%: DateTime.Now.Year %> User Information System | Developed for CAUC507
+        </footer>
+    </form>
+</body>
+</html>

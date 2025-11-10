@@ -1,0 +1,23 @@
+# Ignore Visual Studio cache and build folders
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore IIS Express configs
+Documents/IISExpress/
+
+# Ignore uploads folder (optional)
+Uploads/*
+!Uploads/.gitkeep
+
+# Ignore local DBs (optional)
+# App_Data/*
+
+# Ignore backup and log files
+*.log
+*.tmp
+*.bak
