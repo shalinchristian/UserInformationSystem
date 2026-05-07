@@ -58,7 +58,4 @@ This project was developed as part of the *CAUC507 – Programming with .NET Arc
 
 
 ---
-
-Author
-Shalin Christian
-Full Stack Developer | ASP.NET | SQL Server | C#
+ASP.NET | SQL Server | C#
